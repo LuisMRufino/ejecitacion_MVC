@@ -48,8 +48,10 @@ if (heroe== undefined) {
 //});
 
 // Ruta Créditos
-// ¿?
-
+app.get ('/creditos', (req, res) =>
+{
+	res.send('Terminamos el ejercicio!!!, grupo compuesto por Luis Rufino y Vargas Mariela')
+})
 // Ruta... ¿Pára qué sirve esto?
 //app.get('*', (req, res) => {
 //	res.status(404).send('404 not found. <br> ¡Houston, poseemos problemas!');
