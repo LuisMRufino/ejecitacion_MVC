@@ -25,14 +25,16 @@ app.get('/heroes', (req, res) => {
 });
 //
 // Ruta /heroes/n ➝ se envía el nombre y profesión del héroe solicitado
-//app.get('¿?', (¿?) => {
-	// Acá lo primero será encontrar al héroe que corresponda
-//	let heroe = __¿?__;
-	
-	// Si se encuentra al héroe se envía el nombre y su profesión
-	// Si NO se encuentra se envía el mensaje de no encontrado
-//});
+app.get('/heroes/:n', (req, res) => {
+let heroe = heroes[(req.params.n)-1];
+if (heroe== undefined) {
+	res.send("No se ha encontrado al héroe")
+} else {
+	res.send("Nombre: "+ heroe.nombre+ " " + "Profesión: " + heroe.profesion)
+}
+})
 
+	
 // Ruta /heroes/n/bio ➝ se envía la bio del héroe solicitado
 //app.get('¿?', (¿?) => {
 	// Acá lo primero será encontrar al héroe que corresponda
